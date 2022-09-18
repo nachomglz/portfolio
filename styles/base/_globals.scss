@@ -1,0 +1,43 @@
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $roboto;
+}
+
+body {
+  background-color: $dark-blue;
+}
+
+.container {
+  width: 95%;
+  max-width: 130rem;
+  margin: 0 auto;
+}
+.page-title {
+  color: $white;
+  font-family: $roboto-slab;
+  font-size: 2.5rem;
+}
+.page-subtitle {
+  font-family: $roboto;
+  font-size: $font-normal;
+  letter-spacing: 1px;
+  color: $blue-aqua-strong;
+  margin-top: 1rem;
+}
+
+.wrapper {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+}

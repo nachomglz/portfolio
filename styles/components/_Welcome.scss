@@ -1,0 +1,55 @@
+#Welcome {
+  padding-top: 20rem;
+  height: 100vh;
+  scroll-snap-align: start;
+
+  .Welcome-typing-animation {
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+
+    .blinker {
+      background-color: $white-chalk;
+      height: 3.8rem;
+      width: 0.2rem;
+      margin-left: 0.2rem;
+      animation: blink-smooth 0.9s infinite ease;
+    }
+
+    h1 {
+      font-family: $cascadia;
+      color: $white-chalk;
+
+      &:nth-child(2) {
+        margin-left: 2rem;
+        color: $blue-aqua-strong;
+      }
+    }
+  }
+  .Welcome-quote p {
+    font-size: 2.1rem;
+    color: $white-chalk;
+    font-family: $cascadia;
+    margin-top: 1rem;
+  }
+
+  .Welcome-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2.5rem;
+    margin-top: 2rem;
+
+    button {
+      cursor: pointer;
+      color: $white;
+      background: $dark-blue;
+      opacity: 0.7;
+      border: 1px solid white;
+      border-radius: 0.5rem;
+      height: 5rem;
+      width: 30rem;
+      font-size: $font-normal;
+    }
+  }
+}

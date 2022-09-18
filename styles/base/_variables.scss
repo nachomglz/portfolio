@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/* Create color variables */
+$dark-blue: #43475C;
+$white: #FFFFFF;
+$black: #000000;
+$blue-aqua-strong: #90DFD8;
+$blue-aqua-smooth: #B2E0DA;
+$white-chalk: #EEEEEE;
+$white-grey: #D9D9D9;
+
+/* Create custom font families */
+@font-face {
+  font-family: 'Cascadia';
+  src: url('../../assets/fonts/Cascadia.woff') format('woff');
+}
+
+/* Create font variables */
+$roboto: Roboto, sans-serif;
+$cascadia: 'Cascadia', sans-serif;
+$roboto-slab: 'Roboto Slab', sans-serif;
+
+
+/* Create font sizes */
+$font-normal: 1.5rem;
+$font-medium: 2.1rem;
+
+
+

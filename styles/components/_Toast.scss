@@ -1,0 +1,27 @@
+.toast {
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #121212;
+  color: $white;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  width: 34rem;
+  margin: auto;
+  justify-content: space-between;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+
+  &.hidden {
+    transform: translateY(5rem);
+  }
+  &.shown {
+    transform: translateY(-2rem);
+  }
+
+  .toast-cross {
+    cursor: pointer;
+  }
+}

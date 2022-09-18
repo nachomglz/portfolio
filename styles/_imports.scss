@@ -1,0 +1,16 @@
+/* Base scss file */
+@import "base/variables";
+@import "base/mixins";
+@import "base/animations";
+
+/* Import globals after importing mixins and variables to be able to use them */
+@import "base/globals";
+
+/* Components */
+@import "components/Navbar";
+@import "components/Welcome";
+@import "components/Work";
+@import "components/MySkills";
+@import "components/Toast";
+@import "components/About";
+@import "components/Contact";

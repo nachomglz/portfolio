@@ -9,9 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
+    "@types/jquery": "^3.5.14",
+    "jquery": "^3.6.1",
     "next": "12.2.5",
+    "next-images": "^1.8.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0",
+    "react-tsparticles": "^2.2.4",
+    "TagCloud": "^2.2.0",
+    "tsparticles": "^2.2.4",
+    "tsparticles-slim": "^2.2.4"
   },
   "devDependencies": {
     "@types/node": "18.7.15",

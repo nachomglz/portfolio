@@ -1,0 +1,41 @@
+.Navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 3.3rem 11rem;
+  background: linear-gradient(to bottom, $dark-blue 70%, rgba(0, 0, 0, 0));
+  z-index: 4;
+
+  .content {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      cursor: pointer;
+    }
+
+    .right-side {
+      a {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: $blue-aqua-strong;
+        text-decoration: none;
+        font-size: 1.5rem;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .navigation {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 5rem;
+    }
+  }
+}
