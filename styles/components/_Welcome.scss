@@ -1,8 +1,6 @@
 #Welcome {
-  padding-top: 20rem;
   height: 100vh;
-  scroll-snap-align: start;
-
+  padding-top: 20rem;
   .Welcome-typing-animation {
     display: flex;
     font-size: 2rem;
@@ -16,12 +14,27 @@
       animation: blink-smooth 0.9s infinite ease;
     }
 
-    h1 {
+    .hello-message {
+      display: flex;
+
+      @media (max-width: 700px) {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      font-size: 3rem;
       font-family: $cascadia;
       color: $white-chalk;
 
-      &:nth-child(2) {
-        margin-left: 2rem;
+      .hello-message-im {
+        font-size: 3rem;
+        font-family: $cascadia;
+        color: $white-chalk;
+      }
+
+      .hello-message-im-name {
+        font-size: 3rem;
+        font-family: $cascadia;
         color: $blue-aqua-strong;
       }
     }
@@ -31,6 +44,11 @@
     color: $white-chalk;
     font-family: $cascadia;
     margin-top: 1rem;
+    line-height: 1.5;
+
+    @media (max-width: 450px) {
+      font-size: 1.8rem;
+    }
   }
 
   .Welcome-buttons {
@@ -40,8 +58,12 @@
     gap: 2.5rem;
     margin-top: 2rem;
 
-    button {
-      cursor: pointer;
+    @media (max-width: 450px) {
+      flex-direction: column;
+      margin-top: 4rem;
+    }
+
+    a {
       color: $white;
       background: $dark-blue;
       opacity: 0.7;
@@ -50,6 +72,10 @@
       height: 5rem;
       width: 30rem;
       font-size: $font-normal;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

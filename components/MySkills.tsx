@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { ReactNode, useEffect, useState, useRef } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { Skill } from "../utils/interfaces";
 import TagSphere from "../utils/TagSphere";
 
@@ -31,11 +31,6 @@ const tagSphereItems: Array<string | ReactNode> = [
 ];
 
 const MySkills: NextPage = () => {
-  const skillsObservedRef = useRef<any>();
-  const sectionObservedRef = useRef<any>();
-
-  const [isSkillsVisible, setIsSkillsVisible] = useState<boolean>(false);
-  const [isSectionVisible, setIsSectionVisible] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
   const [skills, setSkills] = useState<Skill[]>([
     { name: "React", percentage: 95, currentPercentage: 0 },
@@ -47,32 +42,8 @@ const MySkills: NextPage = () => {
   ]);
 
   useEffect(() => {
-    // initialize intersection observer for the skills section
-    const skillsObserver = new IntersectionObserver(entries => {
-      const entry = entries[0];
-      if (entry.isIntersecting) {
-        setIsSkillsVisible(true);
-      } else {
-        setIsSkillsVisible(false);
-      }
-    });
-    skillsObserver.observe(skillsObservedRef.current);
-
-    // initialize intersection observer for the entire section
-    const sectionObserver = new IntersectionObserver(entries => {
-      const entry = entries[0];
-      if (entry.isIntersecting) {
-        setIsSectionVisible(true);
-      } else {
-        setIsSectionVisible(false);
-      }
-    });
-    sectionObserver.observe(sectionObservedRef.current);
-  }, []);
-
-  useEffect(() => {
     // console.log(document.querySelectorAll(".bottom-section__skills-skill hr"));
-    if (loading && isSkillsVisible) {
+    if (loading) {
       setTimeout(() => {
         let newSkillState: Skill[] = skills.map((value: Skill): Skill => {
           if (value.currentPercentage < value.percentage) {
@@ -92,15 +63,12 @@ const MySkills: NextPage = () => {
         setSkills(newSkillState);
       }, 15);
     }
-  }, [skills, isSkillsVisible]);
+  }, [skills]);
 
   return (
-    <section
-      id='MySkills'
-      className={`container ${isSectionVisible ? "visible" : "hidden"}`}
-    >
+    <section id='MySkills' className={`container visible`}>
       <h1 className='page-title'>What am I good at?</h1>
-      <p className={`page-subtitle `} ref={sectionObservedRef}>
+      <p className={`page-subtitle `}>
         I like to work with the JavaScript ecosystem to develop most of my
         projects, but sometimes I like to experiment with other technologies.
       </p>
@@ -108,10 +76,7 @@ const MySkills: NextPage = () => {
       <div className='bottom-section'>
         <div className='bottom-section__skills'>
           <h2>These are my most used technologies</h2>
-          <div
-            ref={skillsObservedRef}
-            className='bottom-section__skills-container'
-          >
+          <div className='bottom-section__skills-container'>
             {skills.map((value: Skill, index: number) => (
               <div
                 key={index}
@@ -135,10 +100,14 @@ const MySkills: NextPage = () => {
         </div>
         <div className='bottom-section__tagcloud'>
           <TagSphere
-            radius={270}
+            radius={
+              typeof window !== "undefined" && window.innerWidth >= 1200
+                ? 270
+                : 150
+            }
+            /*radius={270}*/
             fullWidth={true}
             fullHeight={true}
-            /*texts={["React", "Node.js", "Python", "PHP", "Java", "Sass"]}*/
             texts={tagSphereItems}
           />
         </div>

@@ -20,9 +20,13 @@ const Welcome: NextPage = () => {
   return (
     <section id='Welcome' className='container'>
       <div className='Welcome-typing-animation'>
-        <h1>Hello, I'm </h1>
-        <h1>{displayName}</h1>
-        <span className='blinker'></span>
+        <div className='hello-message'>
+          Hello,&nbsp;
+          <span className='hello-message-im'>
+            I'm <span className='hello-message-im-name'>{displayName}</span>
+            <span className='blinker'></span>
+          </span>
+        </div>
       </div>
       <div className='Welcome-quote'>
         <p>I'm a Fullstack developer based in Spain</p>

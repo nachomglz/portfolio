@@ -98,57 +98,18 @@ const githubRepos: Project[] = [
 ];
 
 const Work: NextPage = () => {
-  const freelanceObservedRef = useRef<any>();
-  const personalObservedRef = useRef<any>();
-
-  const [isFreelanceVisible, setIsFreelanceVisible] = useState<boolean>(false);
-  const [isPersonalVisible, setIsPersonalVisible] = useState<boolean>(false);
-
-  useEffect(() => {
-    // initialize intersection observer for the freelance projects section
-    const freelanceObserver = new IntersectionObserver(entries => {
-      const entry = entries[0];
-      // Once the entry is intersecting, we can load the animations
-      if (entry.isIntersecting) {
-        setIsFreelanceVisible(true);
-      } else {
-        setIsFreelanceVisible(false);
-      }
-    });
-    freelanceObserver.observe(freelanceObservedRef.current);
-
-    // initialize intersection observer for the personal projects section
-    const personalObserver = new IntersectionObserver(entries => {
-      const entry = entries[0];
-      if (entry.isIntersecting) {
-        setIsPersonalVisible(true);
-      } else {
-        setIsPersonalVisible(false);
-      }
-    });
-    personalObserver.observe(personalObservedRef.current);
-  }, []);
-
   return (
     <div id='Work'>
-      <section
-        className={`work-freelance container ${
-          isFreelanceVisible ? "visible" : "hidden"
-        }`}
-      >
+      <section className={`work-freelance container `}>
         <h1 className='page-title'>Freelancing</h1>
-        <p className='page-subtitle' ref={freelanceObservedRef}>
+        <p className='page-subtitle'>
           These are some of the freelance projects that I've worked in.
         </p>
         <ProjectsContainer type='freelance' data={freelanceProjects} />
       </section>
-      <section
-        className={`work-personal container ${
-          isPersonalVisible ? "visible" : "hidden"
-        }`}
-      >
+      <section className={`work-personal container `}>
         <h1 className='page-title'>Personal projects</h1>
-        <p className='page-subtitle' ref={personalObservedRef}>
+        <p className='page-subtitle'>
           I like to build all types of stuff while on my free time, these are
           the repositories for my personal projects.
         </p>
