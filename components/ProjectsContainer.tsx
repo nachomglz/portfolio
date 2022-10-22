@@ -63,6 +63,7 @@ const FreelanceProjectsContainer = ({ data, type }: Props) => {
                 <a
                   href={item.html_url}
                   target='_blank'
+                  rel='noreferrer'
                   className='personal-project__name'
                 >
                   {item.name}

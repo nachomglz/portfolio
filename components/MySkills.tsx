@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Image from "next/image";
 import { ReactNode, useEffect, useState } from "react";
 import { Skill } from "../utils/interfaces";
 import TagSphere from "../utils/TagSphere";
@@ -17,17 +18,17 @@ import NextIcon from "../assets/tagSphereItems/next-icon.svg";
 import MongoIcon from "../assets/tagSphereItems/mongodb-icon.svg";
 
 const tagSphereItems: Array<string | ReactNode> = [
-  <img src={ReactLogo} />,
-  <img src={GitIcon} />,
-  <img src={NextIcon} />,
-  <img src={MongoIcon} />,
-  <img src={JavaIcon} />,
-  <img src={JavaScriptIcon} />,
-  <img src={NodeIcon} />,
-  <img src={PhpIcon} />,
-  <img src={PythonIcon} />,
-  <img src={TypeScriptIcon} />,
-  <img src={SassIcon} />,
+  <Image src={ReactLogo} key={1} alt='image' />,
+  <Image src={GitIcon} key={2} alt='image' />,
+  <Image src={NextIcon} key={3} alt='image' />,
+  <Image src={MongoIcon} key={4} alt='image' />,
+  <Image src={JavaIcon} key={5} alt='image' />,
+  <Image src={JavaScriptIcon} key={6} alt='image' />,
+  <Image src={NodeIcon} key={7} alt='image' />,
+  <Image src={PhpIcon} key={8} alt='image' />,
+  <Image src={PythonIcon} key={9} alt='image' />,
+  <Image src={TypeScriptIcon} key={10} alt='image' />,
+  <Image src={SassIcon} key={11} alt='image' />,
 ];
 
 const MySkills: NextPage = () => {

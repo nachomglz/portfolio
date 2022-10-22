@@ -8,7 +8,7 @@ const Contact: NextPage = () => {
 
   return (
     <section id='Contact' className='container'>
-      <h1 className='page-title'>Let's get in touch!</h1>
+      <h1 className='page-title'>Let&apos;s get in touch!</h1>
       <p className='page-subtitle'>
         You can use the form below, or directly send me an email at &lt;&lt;
         <a href='mailto:nachomartindev@gmail.com'>nachomartindev@gmail.com</a>

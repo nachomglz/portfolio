@@ -32,16 +32,17 @@
         background-color: $blue-aqua-smooth;
       }
 
-      img {
-        height: 4rem;
-        width: 4rem;
-      }
-
-      @media (max-width: 600px) {
-        padding: 1rem !important;
+      a {
         img {
-          height: 2.5rem !important;
-          width: 2.5rem !important;
+          height: 4rem;
+          width: 4rem;
+        }
+        @media (max-width: 600px) {
+          padding: 1rem !important;
+          img {
+            height: 2.5rem !important;
+            width: 2.5rem !important;
+          }
         }
       }
     }

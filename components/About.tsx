@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Image from "next/image";
 import GitHubIcon from "../assets/icons/github-icon.svg";
 import InstagramIcon from "../assets/icons/instagram-icon.svg";
 import LinkedinIcon from "../assets/icons/linkedin-icon.svg";
@@ -31,33 +32,37 @@ const About: NextPage = () => {
         <a
           href='https://instagram.com/nachomglz'
           target='_blank'
+          rel='noreferrer'
           className='about__socials-social'
         >
-          <img src={InstagramIcon} />
+          <Image height={1} width={1} src={InstagramIcon} alt='image' />
         </a>
         <a
           href='https://github.com/nachomglz'
           target='_blank'
           className='about__socials-social'
+          rel='noreferrer'
         >
-          <img src={GitHubIcon} />
+          <Image height={1} width={1} src={GitHubIcon} alt='image' />
         </a>
         <a
           href='https://linkedin.com/in/ignaciomglz'
           target='_blank'
+          rel='noreferrer'
           className='about__socials-social'
         >
-          <img src={LinkedinIcon} />
+          <Image height={1} width={1} src={LinkedinIcon} alt='image' />
         </a>
         <a
           href='https://twitch.tv/nachetemartin'
           target='_blank'
+          rel='noreferrer'
           className='about__socials-social'
         >
-          <img src={TwitchIcon} />
+          <Image height={1} width={1} src={TwitchIcon} alt='image' />
         </a>
         <a className='about__socials-social'>
-          <img src={YoutubeIcon} />
+          <Image height={1} width={1} src={YoutubeIcon} alt='image' />
         </a>
       </div>
     </section>

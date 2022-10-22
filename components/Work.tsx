@@ -103,7 +103,7 @@ const Work: NextPage = () => {
       <section className={`work-freelance container `}>
         <h1 className='page-title'>Freelancing</h1>
         <p className='page-subtitle'>
-          These are some of the freelance projects that I've worked in.
+          These are some of the freelance projects that I&apos;ve worked in.
         </p>
         <ProjectsContainer type='freelance' data={freelanceProjects} />
       </section>

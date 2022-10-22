@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { argv0 } from "process";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const Welcome: NextPage = () => {
@@ -8,7 +8,7 @@ const Welcome: NextPage = () => {
 
   useEffect(() => {
     updateName();
-  }, []);
+  });
 
   const updateName = () => {
     let interval = setInterval(() => {
@@ -23,17 +23,18 @@ const Welcome: NextPage = () => {
         <div className='hello-message'>
           Hello,&nbsp;
           <span className='hello-message-im'>
-            I'm <span className='hello-message-im-name'>{displayName}</span>
+            I&apos;m{" "}
+            <span className='hello-message-im-name'>{displayName}</span>
             <span className='blinker'></span>
           </span>
         </div>
       </div>
       <div className='Welcome-quote'>
-        <p>I'm a Fullstack developer based in Spain</p>
+        <p>I&apos;m a Fullstack developer based in Spain</p>
       </div>
       <div className='Welcome-buttons'>
-        <a href='/#About'>Whoaim</a>
-        <a href='/#Contact'>Wanna work with me?</a>
+        <Link href='/#About'>Whoaim</Link>
+        <Link href='/#Contact'>Wanna work with me?</Link>
       </div>
     </section>
   );
