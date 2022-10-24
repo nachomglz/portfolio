@@ -35,7 +35,7 @@ const Welcome: NextPage = () => {
 				<p>I&apos;m a Fullstack developer based in Spain</p>
 			</div>
 			<div className='Welcome-buttons'>
-				<Link href='/#About'>Whoaim</Link>
+				<Link href='/#About'>Whoami</Link>
 				<Link href='/#Contact'>Wanna work with me?</Link>
 			</div>
 		</section>
