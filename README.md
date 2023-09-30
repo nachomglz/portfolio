@@ -1,8 +1,8 @@
-# Portfolio deployment
-These are the steps, requirements and tech stack that I'm going to use to deploy my porfolio page and my Link In BIO page.
+# Nacho's Portfolio
 
-These are the technologies that I'm going to use to deploy the LIBIO page.
+This is the code for my portfolio, you can visit the webpage [here](https://nachomartin.dev).
 
-- First of all
-- Second of all
-- Third of all
+## Todo
+
+This portfolio is not finished yet, you can see the things that I'm planning on adding [here](TODO.md).
+
