@@ -1,0 +1,55 @@
+.personal-repositories {
+  // display: flex;
+  // flex-direction: column;
+  gap: 1.4rem;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .personal-repository {
+    border: 1px solid white;
+    border-radius: .7rem;
+    min-height: 10rem;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    font-size: 1.6rem;
+
+    .personal-repository__title-field {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      h3 {
+        font-size: 2.5rem;
+        cursor: pointer;
+        font-family: Cascadia;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .repository-type {
+        color: white;
+        border: 1px solid white;
+        border-radius: 1.2rem;
+        padding: .3rem 1rem;
+        margin-top: .2rem;
+        background-color: rgba(255,255,255,0.1);
+      }
+    }
+
+    .personal-repository__bottom-field {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      img {
+        height: 3rem;
+      }
+      span {
+        margin-top: .3rem;
+      }
+    }
+  }
+}

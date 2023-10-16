@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
-import Welcome from "../components/Welcome";
-import Work from "../components/Work";
+import { Welcome } from "../components/Welcome";
+import { Repositories } from "../components/Repositories"
 import MySkills from "../components/MySkills";
 import About from "../components/About";
 import ParticlesComponent from "../components/Particles";
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
       <Navbar />
       <div className='wrapper'>
         <Welcome />
-        <Work />
+        <Repositories />
         <MySkills />
         <About />
         <Contact />
