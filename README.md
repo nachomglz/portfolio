@@ -1,8 +1,8 @@
-# Nacho's Portfolio
+# blank
 
-This is the code for my portfolio, you can visit the webpage [here](https://nachomartin.dev).
+blank
 
-## Todo
+## Attributes
 
-This portfolio is not finished yet, you can see the things that I'm planning on adding [here](TODO.md).
-
+- **Database**: mongodb
+- **Storage Adapter**: localDisk
