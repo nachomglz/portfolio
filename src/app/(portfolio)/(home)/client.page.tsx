@@ -1,5 +1,5 @@
 'use client'
 
 export default function HomeClientPage() {
-  return <div>Home</div>
+  return <div className="px-5">Home</div>
 }
